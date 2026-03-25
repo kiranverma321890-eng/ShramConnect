@@ -1,0 +1,307 @@
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #cbb799, #3d3f42, #000000);
+    color: white;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bolder;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: large;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 18px;
+    display: block;
+}
+
+/* Hover */
+.nav-links a:hover {
+    color: orange;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    min-width: 160px;
+    border-radius: 6px;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background: orange;
+    color: black;
+}
+
+/* Show dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    font-family: 'Ubuntu', sans-serif;
+    color: orange;
+}
+
+.hero p {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 20px 0;
+    color: #cbd5e1;
+}
+
+/* BUTTONS */
+.hero-buttons .btn {
+    background: orange;
+    color: #111;
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background: #ff9933;
+    transform: translateY(-2px);
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 45px;
+    flex-wrap: wrap;
+    margin-left: 90px;
+}
+
+.card {
+    background: rgba(250, 250, 250, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: orange;
+}
+
+.card a {
+    color: orange;
+    text-decoration: none;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.stat h2 {
+    color: orange;
+    font-size: 36px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+}
+
+/* ========== CONTRACTOR LOGIN ========== */
+.contractorlogin-container {
+    width: 350px;
+    margin: 100px auto;
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contractorlogin-container h2 {
+    color: orange;
+}
+
+.contractorlogin-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contractorlogin-container button {
+    background: orange;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact-container {
+    display: flex;
+    height: 100vh;
+}
+
+.contact-left {
+    flex: 1;
+    background: orange;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-left img {
+    height: 200px;
+    width: 300px;
+}
+
+.contact-right {
+    flex: 1;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    width: 80%;
+    max-width: 400px;
+}
+
+.contact-form h2 {
+    color: black;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: black;
+    color: orange;
+    border: none;
+    cursor: pointer;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 150px;
+    color: orange;
+    font-weight: bold;
+}
+
+/* ========== ADMIN LOGIN ========== */
+
+.admin login {
+    background-color: black;
+}
+
+.admin-login h2 {
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    color: Orange;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}

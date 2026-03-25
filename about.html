@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ShramConnect</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(to right,#cbb799, #3d3f42, #000000);
+            color: white;
+        }
+
+        .about-container {
+            padding: 50px;
+            width: 85%;
+            margin: auto;
+        }
+
+        /* About Section Layout */
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.7);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .about-text {
+            width: 50%;
+        }
+
+        .about-text h1 {
+            color: orange;
+        }
+
+        .about-video {
+            width: 45%;
+        }
+
+        .about-video video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px black;
+        }
+
+        /* Info Boxes */
+        .about-box {
+            background: rgba(0,0,0,0.7);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            animation: slideUp 1s ease;
+        }
+
+        .about-box h2 {
+            color: orange;
+        }
+
+        /* Image Cards */
+        .about-gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .about-card {
+            width: 30%;
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .about-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .about-card h3 {
+            padding: 15px;
+            color: orange;
+        }
+
+        .about-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px orange;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            text-align: center;
+            background: orange;
+            color: black;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #ff9933;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            text-align: center;
+            padding: 20px;
+            color: orange;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes slideUp {
+            from {transform: translateY(40px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="about-container">
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-text">
+            <h1>About ShramConnect</h1>
+            <p>
+                ShramConnect is a platform that connects skilled and unskilled workers
+                with contractors who are looking for workers for construction, plumbing,
+                electrical, driving, cleaning and other jobs. Our goal is to make hiring
+                workers easy, fast and reliable.
+            </p>
+        </div>
+
+        <div class="about-video">
+            <video autoplay muted loop>
+                <source src="indexvideo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="about-box">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to provide employment opportunities to daily wage workers
+            and help contractors find workers easily in their local area.
+        </p>
+    </div>
+
+    <!-- Services -->
+    <div class="about-box">
+        <h2>Services We Provide</h2>
+        <p>
+            ✔ Worker Registration <br>
+            ✔ Contractor Job Posting <br>
+            ✔ Job Search by Skill & Location <br>
+            ✔ Apply for Jobs <br>
+            ✔ View Applications <br>
+            ✔ Find Workers by Location
+        </p>
+    </div>
+
+    <!-- How it works -->
+    <div class="about-box">
+        <h2>How It Works</h2>
+        <p>
+            Workers create profile → Search jobs → Apply → Contractor contacts worker.
+            Contractors post jobs → Receive applications → Hire workers.
+        </p>
+    </div>
+
+    <!-- Image Cards -->
+    <div class="about-gallery">
+        <div class="about-card">
+            <img src="img/download (1).jpg">
+            <h3>Construction Work</h3>
+        </div>
+
+        <div class="about-card">
+            <img src="img/download.jpg">
+            <h3>Plumbing Work</h3>
+        </div>
+
+        <div class="about-card">
+            <img src="img/images.jpg">
+            <h3>Electric Work</h3>
+        </div>
+    </div>
+
+    <!-- Back to Home -->
+    <a href="index.html" class="back-btn">← Back to Home</a>
+
+</div>
+
+<footer>
+    <p>© 2026 ShramConnect | By KIRAN VERMA</p>
+    <p>Empowering workers and employers digitally</p>
+</footer>
+
+</body>
+</html>

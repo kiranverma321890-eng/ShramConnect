@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Jobs</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#cbb799, #3d3f42, #000000);
+            color: white;
+        }
+
+        .container {
+            width: 85%;
+            margin: 50px auto;
+            background: rgba(0,0,0,0.7);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.6);
+        }
+
+        h2 {
+            text-align: center;
+            color: orange;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: orange;
+            color: black;
+            padding: 14px;
+        }
+
+        td {
+            padding: 14px;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+        }
+
+        tr:hover td {
+            background: rgba(255,165,0,0.15);
+        }
+
+        .apply-btn {
+            background: orange;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .apply-btn:hover {
+            background: #ff9933;
+            color: white;
+        }
+
+        #jobs {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .top-bar {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        .top-bar a {
+            background: orange;
+            padding: 8px 15px;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .top-bar a:hover {
+            background: #ff9933;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="top-bar">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <h2>Available Jobs</h2>
+
+    <div id="jobs">Loading jobs...</div>
+</div>
+
+<script>
+fetch("view_jobs.php")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("jobs").innerHTML = data;
+})
+.catch(error => {
+    document.getElementById("jobs").innerHTML = "Error loading jobs.";
+});
+</script>
+
+</body>
+</html>

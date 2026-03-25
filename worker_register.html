@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register Worker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT SIDE */
+
+        .left-side {
+            flex: 1;
+            background-color: orange;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .left-side h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .left-side p {
+            font-size: 20px;
+        }
+
+        .left-side img {
+            height: 200px;
+            width: 330px;
+        }
+
+        /* RIGHT SIDE */
+
+        .right-side {
+            flex: 1;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form-container h1 {
+            margin-top: 10px;
+            font-size: 30px;
+            color: black;
+        }
+
+        .form-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: 200;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            color: black;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+        }
+
+        .form-container input[type="submit"] {
+            background: black;
+            color: orange;
+            font-size: 16px;
+            font-weight: 200;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background: #333;
+        }
+
+        .form-footer {
+            margin-bottom: 45px;
+            font-size: 13px;
+        }
+
+        .form-footer a {
+            color: orange;
+            text-decoration: none;
+            font-weight: 300;
+        }
+
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side,
+            .right-side {
+                flex: unset;
+                height: 50vh;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LEFT SIDE -->
+    <div class="container">
+
+        <div class="left-side">
+
+            <img src="1logo.png">
+
+            <h1>ShramSetu</h1>
+
+            <p>Connecting labourers with opportunities</p>
+
+        </div>
+
+        <div class="right-side">
+            <div class="form-container"><br>
+                <h1>Register Worker</h1><br>
+                <form action="add_worker.php" method="POST">
+                    <input type="text" name="name" placeholder="Full Name" required>
+
+                    <input type="text" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Phone Number"
+                        required>
+
+                    <select name="skill" required>
+                        <option value="">Select Skill</option>
+                        <option value="Mason">Mason</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Painter">Painter</option>
+                        <option value="Welder">Welder</option>
+                        <option value="Helper">Helper</option>
+                        <option value="Driver">Driver</option>
+                        <option value="Cleaner">Cleaner</option>
+                        <option value="Security Guard">Security Guard</option>
+                    </select>
+
+                    <select name="experience" required>
+                        <option value="">Select Experience</option>
+                        <option value="Fresher">Fresher</option>
+                        <option value="1 Year">1 Year</option>
+                        <option value="2 Years">2 Years</option>
+                        <option value="3 Years">3 Years</option>
+                        <option value="5+ Years">5+ Years</option>
+                    </select>
+
+                    <select name="availability" required>
+                        <option value="">Available For</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Daily Wage">Daily Wage</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+
+                    <input type="text" name="location" placeholder="Location" required>
+                    <input type="number" name="wage" placeholder="Expected Wage (₹)" required>
+                    <input type="password" name="password" placeholder="Password" required>
+
+                    <input type="submit" value="Register">
+                </form>
+                <div class="form-footer">
+                    Already registered? <a href="workerlogin.html">Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

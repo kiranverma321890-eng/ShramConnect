@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ShramSetu - Post Job</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT SIDE */
+
+        .left-side {
+            flex: 1;
+            background-color: orange;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .left-side h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .left-side p {
+            font-size: 20px;
+        }
+
+        .left-side img {
+            height: 200px;
+            width: 330px;
+        }
+
+        /* RIGHT SIDE */
+
+        .right-side {
+            flex: 1;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-top: 5px;
+            font-size: 32px;
+            color: black;
+        }
+
+        .form-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"] {
+            background: black;
+            color: orange;
+            font-size: 15px;
+            font-weight: 400;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background: #333;
+        }
+
+        .form-footer {
+            margin-top: -10px;
+            font-size: 15px;
+        }
+
+        .form-footer a {
+            color: orange;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side,
+            .right-side {
+                flex: unset;
+                height: 50vh;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-side">
+
+            <img src="1logo.png">
+
+            <h1>ShramSetu</h1>
+
+            <p>Connecting labourers with opportunities</p>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-side">
+
+            <div class="form-container">
+
+                <h2>Post Job</h2>
+
+                <form action="post_job.php" method="POST">
+
+                    <label>Job Type</label>
+                    <select name="skill" required>
+                        <option value="">Select Job Type</option>
+                        <option value="Mason">Mason (Rajmistri)</option>
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Painter">Painter</option>
+                        <option value="Welder">Welder</option>
+                        <option value="Helper">Helper</option>
+                        <option value="Driver">Driver</option>
+                        <option value="Cleaner">Cleaner</option>
+                        <option value="Security Guard">Security Guard</option>
+                    </select>
+
+                    <label>Mobile No.:-</label>
+                    <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+                    <label>Location</label>
+                    <input type="text" name="location" placeholder="City or Area" required>
+
+                    <label>Daily Wage (₹)</label>
+                    <input type="number" name="wage" placeholder="E.g., 700" required>
+
+                    <label>Workers Needed</label>
+                    <input type="number" name="workers_needed" placeholder="Number of workers" required>
+
+                    <input type="submit" value="Post Job">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+    
+</html>

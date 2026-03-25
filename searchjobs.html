@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Jobs</title>
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:black;">
+
+<div style="height:100vh; display:flex; justify-content:center; align-items:center;">
+
+    <div style="background:#222; padding:30px 40px; border-radius:10px; width:320px; box-shadow:0 8px 20px rgba(255,165,0,0.3); text-align:center;">
+        
+        <h2 style="margin-bottom:20px; color:#ff6600;">Search Jobs</h2>
+
+        <form action="searchjobs.php" method="POST">
+            
+            <!-- Skill Dropdown -->
+            <select name="skill" required
+                style="width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px; font-size:14px; background:#f9f9f9;">
+                <option value="">Select Skill</option>
+                <option value="Mason">Mason (Rajmistri)</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Painter">Painter</option>
+                <option value="Welder">Welder</option>
+                <option value="Helper">Helper</option>
+                <option value="Driver">Driver</option>
+                <option value="Cleaner">Cleaner</option>
+                <option value="Security Guard">Security Guard</option>
+            </select>
+
+            <!-- Location Input -->
+            <input type="text" name="location" placeholder="Location" required
+                style="width:94%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:5px; font-size:14px;">
+
+            <br><br>
+
+            <!-- Button -->
+            <button type="submit"
+                onmouseover="this.style.background='#e65c00'" 
+                onmouseout="this.style.background='#ff6600'"
+                style="width:100%; padding:10px; background:#ff6600; border:none; border-radius:5px; color:#fff; font-size:16px; cursor:pointer;">
+                Search
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

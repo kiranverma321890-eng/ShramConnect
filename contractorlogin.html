@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Contractor Login - ShramConnect</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.contractorlogin-container{
+width:350px;
+margin:100px auto;
+background:#222;
+padding:30px;
+border-radius:10px;
+text-align:center;
+}
+
+.contractorlogin-container h2{
+color:orange;
+margin-bottom:20px;
+}
+
+.contractorlogin-container input{
+width:90%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+.contractorlogin-container button{
+background:orange;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contractorlogin-container">
+
+<h1>Contractor Login</h1>
+
+<form action="contractor_login.php" method="POST">
+
+<input type="email" name="email" placeholder="Enter Email" required>
+
+<input type="password" name="password" placeholder="Enter Password" required><br><br>
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+</body>
+</html>

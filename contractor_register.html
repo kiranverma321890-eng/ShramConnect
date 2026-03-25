@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register Contractor</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* LEFT SIDE */
+
+        .left-side {
+            flex: 1;
+            background-color: orange;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .left-side h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .left-side p {
+            font-size: 20px;
+        }
+
+        .left-side img {
+            height: 200px;
+            width: 330px;
+        }
+
+        /* RIGHT SIDE */
+
+        .right-side {
+            flex: 1;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+            color: black;
+        }
+
+        .form-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"] {
+            background: black;
+            color: orange;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background: #333;
+        }
+
+        .form-footer {
+            margin-top: 18px;
+            font-size: 18px;
+        }
+
+        .form-footer a {
+            color: orange;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .left-side,
+            .right-side {
+                flex: unset;
+                height: 50vh;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LEFT SIDE -->
+    <div class="container">
+
+        <div class="left-side">
+
+            <img src="1logo.png">
+
+            <h1>ShramSetu</h1>
+
+            <p>Connecting labourers with opportunities</p>
+
+        </div>
+
+        <div class="right-side">
+            <div class="form-container">
+                <h2>Register Contractor</h2>
+                <form action="add_contractor.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="number" name="phone" placeholder="Your Phone Number" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="password" name="password" placeholder="Create Password" required>
+                    <input type="text" name="location" placeholder=" Your Location" required>
+                    <input type="submit" value="Register">
+                </form>
+                <div class="form-footer">
+                    Already registered? <a href="contractorlogin.html">Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

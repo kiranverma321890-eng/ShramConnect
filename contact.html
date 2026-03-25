@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us - ShramConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contact-container">
+
+        <!-- LEFT -->
+        <div class="contact-left">
+            <img src="1logo.png">
+
+            <h2>ShramConnect</h2>
+            <p>We would love to hear from you.<br>
+                Contact us for any issue or suggestion.</p>
+            <div class="contact-info">
+                <p><b>Email:</b> shramconnect@gmail.com</p>
+                <p><b>Phone:</b> +91 9876543210</p>
+                <p><b>Location:</b> Lucknow, India</p>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="contact-right">
+            <div class="contact-form">
+
+                <h2>Contact Us</h2>
+
+                <form action="contact.php" method="POST">
+                    <label>Name</label>
+                    <input type="text" name="name" required>
+
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+
+                    <label>Message</label>
+                    <textarea name="message" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <a href="index.html" class="back-home"> Back to Home</a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
